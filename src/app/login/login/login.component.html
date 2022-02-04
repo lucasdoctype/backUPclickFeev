@@ -1,0 +1,35 @@
+<main class="wrapper">
+  <div class="container login-container">
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-5">
+        <div class="card-login bordered shadow-md ">
+          <div class="row">
+            <div class="col text-center card-content-login mb-3">
+              <h1>Click <span id="h1-feev-color">Feev</span></h1>
+            </div>
+          </div>
+          <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+            <div class="row d-flex justify-content-center mb-4">
+              <div class="col-9 mb-3">
+                    <input formControlName="email"  type="text" class="form-control" placeholder="E-mail"/>
+              </div>
+              <div class="col-9 mb-4">
+                    <input formControlName="password"  type="password" class="form-control" placeholder="Password"/>
+              </div>
+            </div>
+            <div class="row d-flex justify-content-center ">
+              <div class="col-9 text-center mb-3">
+                    <button type="submit" class="input-btn-login">Entrar</button>
+              </div>
+            </div>
+            <div class="row d-flex justify-content-start">
+              <div class="col text-center mb-4">
+                  <p>Não possui um cadastro? <a routerLink="/cadastro">Clique aqui</a> </p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

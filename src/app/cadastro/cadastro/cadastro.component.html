@@ -1,0 +1,239 @@
+<!-- <fa-icon [icon]="faArrowLeft" class="ml-2" style="font-size: 2rem;" ></fa-icon> -->
+<main class="wrapper">
+  <div class="container login-container" *ngIf="pF === true">
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-5">
+        <div class="card-login bordered shadow-lg">
+          <div class="row">
+            <div class="col-2 ml-3 text-right card-content-login mb-3 mt-4">
+              <button style="border:none;background-color: #fff;" (click)="backButton()">
+                <fa-icon [icon]="faArrowLeft" class="ml-2" style="font-size: 2rem;" ></fa-icon>
+              </button>
+
+            </div>
+            <div class="col text-right card-content-login mb-3 mt-4">
+              <span id="etiquetaCadastro">Física</span>
+            </div>
+          </div>
+          <form [formGroup]="pFCrud" (ngSubmit)="onSubmitPf()" >
+            <div class="row d-flex justify-content-center mt-3">
+              <div class="col-8 text-center mb-3">
+                <input
+                formControlName="name"
+                  type="text"
+                  class="form-control"
+                  placeholder="Nome Completo"
+                />
+              </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+              <div class="col-8 text-center mb-3">
+                <input
+                formControlName="email"
+                  type="text"
+                  class="form-control"
+                  placeholder="E-mail"
+                />
+              </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+              <div class="col-8 text-center mb-3">
+                <input
+                formControlName="cpf"
+                mask="000.000.000-00"
+                  type="text"
+                  class="form-control"
+                  placeholder="Cpf"
+                />
+              </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+              <div class="col-8 text-center mb-3">
+                <input
+                formControlName="password"
+                  type="password"
+                  class="form-control"
+                  placeholder="Senha"
+                />
+              </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+              <div class="col-8 mb-3">
+                <input
+                  type="checkbox"
+                  id="vehicle1"
+                  name="autorization"
+                  value="ok"
+                  formControlName="autorization"
+                />
+                <label
+                  for="vehicle1"
+                  style="
+                    font-size: 11px;
+                    position: fixed;
+                    margin-left: 15px;
+                    line-height: 11px;
+                  "
+                >
+                  Li e concordo com os termos e autorização <br />do uso dos
+                  meus dados;.
+                  <a href="#">Termos de uso / Autorização</a> </label
+                ><br />
+              </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+              <div class="col-9 text-center mb-3">
+                <button class="input-btn-login" id="pJ">Cadastrar</button>
+              </div>
+            </div>
+            <div class="row d-flex justify-content-start">
+              <div class="col text-center mb-4 mt-3">
+                <p>
+                  Ja possui um cadastro?
+                  <a href="" routerLink="/login">Clique aqui</a>
+                </p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container login-container" *ngIf="pJ === true">
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-5">
+        <div class="card-login bordered shadow-lg">
+          <div class="row">
+            <div class="col-2 ml-3 text-right card-content-login mb-3 mt-4">
+              <button style="border:none;background-color: #fff;" (click)="backButton()">
+                <fa-icon [icon]="faArrowLeft" class="ml-2" style="font-size: 2rem;" ></fa-icon>
+              </button>
+
+            </div>
+            <div class="col text-right card-content-login mb-3 mt-4">
+              <span id="etiquetaCadastro">Jurídica</span>
+            </div>
+          </div>
+          <form  >
+            <div class="row d-flex justify-content-center mt-3">
+              <div class="col-8 text-center mb-3">
+                <input
+
+                  type="text"
+                  class="form-control"
+                  placeholder="Nome Fantasia"
+                />
+              </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+              <div class="col-8 text-center mb-3">
+                <input
+
+                  type="text"
+                  class="form-control"
+                  placeholder="E-mail"
+                />
+              </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+              <div class="col-8 text-center mb-3">
+                <input
+                mask="00.000.000/0000-00"
+                  type="text"
+                  class="form-control"
+                  placeholder="CNPJ"
+                />
+              </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+              <div class="col-8 text-center mb-3">
+                <input
+
+                  type="password"
+                  class="form-control"
+                  placeholder="Senha"
+                />
+              </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+              <div class="col-8 mb-3">
+                <input
+                  type="checkbox"
+                  id="vehicle1"
+                  name="vehicle1"
+                  value="Bike"
+                />
+                <label
+                  for="vehicle1"
+                  style="
+                    font-size: 11px;
+                    position: fixed;
+                    margin-left: 15px;
+                    line-height: 11px;
+                  "
+                >
+                  Li e concordo com os termos e autorização <br />do uso dos
+                  meus dados;.
+                  <a href="#">Termos de uso / Autorização</a> </label
+                ><br />
+              </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+              <div class="col-9 text-center mb-3">
+                <button class="input-btn-login" id="pJ">Cadastrar</button>
+              </div>
+            </div>
+            <div class="row d-flex justify-content-start">
+              <div class="col text-center mb-4 mt-3">
+                <p>
+                  Ja possui um cadastro?
+                  <a href="" routerLink="/login">Clique aqui</a>
+                </p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container login-container" *ngIf="pF === false && pJ === false">
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-5">
+        <div class="card-login bordered shadow-lg">
+          <div class="row">
+            <div class="col text-right card-content-login mb-3 mt-4">
+              <span id="etiquetaCadastro">Cadastro</span>
+            </div>
+          </div>
+          <form>
+            <div class="row d-flex justify-content-center mt-5">
+              <div class="col-9 text-center mb-3">
+                <button
+                  (click)="showFormPerson()"
+                  class="input-btn-login"
+                  id="pF"
+                >
+                  Pessoa Física
+                </button>
+              </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+              <div class="col-9 text-center mb-3">
+                <button class="input-btn-login" id="pJ" (click)="showFormJudicial()">Pessoa Juridica</button>
+              </div>
+            </div>
+            <div class="row d-flex justify-content-start">
+              <div class="col text-center mb-4 mt-5">
+                <p>
+                  Ja possui um cadastro? <a routerLink="/login">Clique aqui</a>
+                </p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
